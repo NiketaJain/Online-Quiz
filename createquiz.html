@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Create Quiz</title>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		  
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		  
+		  
+		  <link rel="stylesheet"  href="style.css">
+	
+	</head>
+	<body ng-app="myApp">
+	<div class="container">
+		<form >
+			<div class="col-md-12">
+				   <h3>Create New Question:</h3>
+					Question:<input type="text" size="100"  placeholder="Enter the question" ><br>
+					Answer:<br>
+				   <input type="radio" name="questionType" value="multi">Multipunch<br>
+     			   <input type="radio" name="questionType" value="singl">Singlepunch<br>
+     			   <div  ng-controller="myCtrl">
+  						<ul>
+    						<li class="chip"ng-repeat="x in products">{{x}}<a class="cross"href="#"><span  ng-click="removeItem($index)">X</span></a></li>
+  						</ul>
+  						<input ng-model="addMe">
+ 					    <button ng-click="addItem()">Add Answer</button>
+ 					    <button ng-click="edit()">Edit Answer</button>
+  						<p>{{errortext}}</p>
+					</div>
+
+     			   		 	
+     		 </div>  
+     			 	 <button  >Submit</button>
+     	 
+			</form>
+	
+		</div>
+
+		
+	<script src="main.js"></script>
+	
+</body>
+</html>
