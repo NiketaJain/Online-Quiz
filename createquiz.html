@@ -13,32 +13,42 @@
 		  <link rel="stylesheet"  href="style.css">
 	
 	</head>
-	<body ng-app="myApp">
-	<div class="container">
+	<body>
+	
+		<div class="container1">
 		<form >
 			<div class="col-md-12">
-				   <h3>Create New Question:</h3>
-					Question:<input type="text" size="100"  placeholder="Enter the question" ><br>
-					Answer:<br>
-				   <input type="radio" name="questionType" value="multi">Multipunch<br>
-     			   <input type="radio" name="questionType" value="singl">Singlepunch<br>
+				   
+					
      			   <div  ng-controller="myCtrl">
+     			   <h3>Create New Question:</h3>
+					Question:<br> <textarea rows="3" cols="70" placeholder="Enter question here..."></textarea><br>
+					<div class="ansType">
+						Answer Type:
+
+				   <label><input type="radio" name="questionType" value="multi">Multipunch<br></label>
+     			   <label><input type="radio" name="questionType" value="singl">Singlepunch<br></label>
+					</div>
+     			   Answer(s):
   						<ul>
-    						<li class="chip"ng-repeat="x in products">{{x}}<a class="cross"href="#"><span  ng-click="removeItem($index)">X</span></a></li>
+    						<li class="chip"ng-repeat="x in products">{{x}}<span class="cross" ng-click="removeItem($index)">X</span></li>
   						</ul>
-  						<input ng-model="addMe">
+  						<input type="text" placeholder="Enter answer here.." ng-model="addMe">
  					    <button ng-click="addItem()">Add Answer</button>
  					    <button ng-click="edit()">Edit Answer</button>
-  						<p>{{errortext}}</p>
+  						<p>{{errortext}}</p><br>
+  						Result:<br> <input type="text" name="result" placeholder="Enetr the result...">
+
 					</div>
 
      			   		 	
      		 </div>  
-     			 	 <button  >Submit</button>
+     			 	 <button>Create</button>
      	 
 			</form>
 	
-		</div>
+		
+	</div>
 
 		
 	<script src="main.js"></script>

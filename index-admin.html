@@ -11,11 +11,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
 
 	<link rel="stylesheet" href="style.css">	
 	<script src="main.js"></script>
 </head>
-<body ng-app="QuizApp">
+<body ng-app="myApp">
 <div class="container">
 <header>
   <h2 class="oq-heading">Online Quiz</h2>
@@ -42,13 +44,13 @@
             
           </ul>
           <div class="createNew">
-            <a href="#/create">Create new</a>
+            <a href="#create">Create new</a>
           </div>
         </div><!--/.nav-collapse -->
       </div>
     </div>
   </div>
-  <div ng-view class="col-sm-9 view-content">
+  <div ng-view class="col-sm-4 view-content">
   </div>
 </div>
 </div>
