@@ -40,4 +40,7 @@ header{
 .text-justify{
   text:text-justify;
 }
+.text-align{
+  text-center;
+}
 }
